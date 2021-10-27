@@ -1,0 +1,227 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Offres{% endblock %}
+
+{% block content %}
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1>Quel projet pour quel prix ?</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Offers -->
+    <div id="offers" class="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" data-aos="fade-up">
+                    <h1 class="h1-large">Aperçu des packs et tarifs</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+
+            <div class="row mt-3">
+
+                <div class="sticker col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="sticker-body">
+                        <h4 class="sticker-title">My Web Light</h4>
+                        <p>Site vitrine professionnel pour être visible sur internet</p>
+                        <div class="sticker-price-text">
+                            A partir de <span class="sticker-price"><sup>€</sup>25</span>/mois
+                            <br><span class="sticker-start-price">+ €250 de frais de démarrage</span>
+                        </div>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Choix du Template</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>1 seule page</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Site 100% Responsive <a href="#modal-box-resp" rel="modal:open"><i class="far fa-question-circle"></i></a></li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>1 langue</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Nom de domaine + hébergement et e-mails</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Sécurisation SSL <a href="#modal-box-ssl" rel="modal:open"><i class="far fa-question-circle"></i></a></li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Mise à jour du framework</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Options <a href="#modal-box-options-myweblight" rel="modal:open"><i class="far fa-question-circle"></i></a></li>
+                        </ul>
+                        <a class="btn-solid-reg" href="{{ path('quote_request') }}">Demander un devis</a>
+                    </div>
+                </div>
+
+                <div class="sticker col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="sticker-body">
+                        <h4 class="sticker-title">My Web Plus</h4>
+                        <p>La version Light couplée à un CMS pour gérer le contenu du site</p>
+                        <div class="sticker-price-text">
+                            A partir de <span class="sticker-price"><sup>€</sup>35</span>/mois
+                            <br><span class="sticker-start-price">+ €1000 de frais de démarrage</span>
+                        </div>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Template Personnalisé</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Jusque 5 pages</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>CMS <a href="#modal-box-cms" rel="modal:open"><i class="far fa-question-circle"></i></a></li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Site 100% Responsive</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>1 langue</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Nom de domaine + hébergement et e-mails</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Sécurisation par SSL</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Mise à jour du framework</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Formulaire de contact</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Options <a href="#modal-box-options-mywebplus" rel="modal:open"><i class="far fa-question-circle"></i></a></li>
+                        </ul>
+                        <a class="btn-solid-reg" href="{{ path('quote_request') }}">Demander un devis</a>
+                    </div>
+                </div>
+
+                <div class="sticker col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="sticker-body">
+                        <h4 class="sticker-title">My Web Full</h4>
+                        <p>Site professionnel avec gestion de contenu, outil analytique, Newsletter </p>
+                        <div class="sticker-price-text">
+                            A partir de <span class="sticker-price"><sup>€</sup>50</span>/mois
+                            <br><span class="sticker-start-price">+ €1500 de frais de démarrage</span>
+                        </div>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Template Personnalisé</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Multiples pages</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>CMS</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Site 100% Responsive</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Jusque 3 langues</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Nom de domaine + hébergement et e-mails</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Sécurisation par SSL</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Mise à jour du framework</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Formulaire de contact</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Outils analytiques <a href="#modal-box-analytic" rel="modal:open"><i class="far fa-question-circle"></i></a></li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Optimisation du contenu pour Google et les réseaux sociaux</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Options <a href="#modal-box-options-mywebfull" rel="modal:open"><i class="far fa-question-circle"></i></a></li>
+                        </ul>
+                        <a class="btn-solid-reg" href="{{ path('quote_request') }}">Demander un devis</a>
+                    </div>
+                </div>
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of filter -->
+
+    <div id="modal-box-resp" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Site web "responsive" ?</h3>
+                    <img src="{{ asset('build/responsive-devices.png') }}" alt="">
+                    <p>
+                        Site internet dont la conception vise, grâce à différents principes et techniques, à offrir une consultation confortable sur des écrans de tailles très différentes.<br>
+                        (TV, Moniteur, PC Portable, Tablette, Smartphone, etc...)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-box-ssl" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Le protocole SSL ?</h3>
+                    <img src="{{ asset('build/ssl-secure.png') }}" alt="">
+                    <p>
+                        Protocole de sécurisation d'échanges sur les réseaux informatiques.<br>
+                        Un certificat de sécurité installé sur le serveur qui héberge votre site va permettre l'encryption et donc la protection des données
+                        échangées avec les visiteurs de votre site web.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-box-options-myweblight" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Les options possibles</h3>
+                    <ul class="fa-ul">
+                        <li><i class="fas fa-arrow-circle-right"></i> Formulaire de contact personnalisé</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Page(s) additionnelle(s)</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Langue(s) additionnelle(s)</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Outils analytiques</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Système de NewsLetter</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Blog</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Galerie Photos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-box-options-mywebplus" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Les options possibles</h3>
+                    <ul class="fa-ul">
+                        <li><i class="fas fa-arrow-circle-right"></i> Gestion du contenu pour vous</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Langue(s) additionnelle(s)</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Outils analytiques</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Système de NewsLetter</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Blog</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Galerie Photos</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> E-Commerce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-box-options-mywebfull" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Les options possibles</h3>
+                    <ul class="fa-ul">
+                        <li><i class="fas fa-arrow-circle-right"></i> Gestion du contenu pour vous</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Langue(s) additionnelle(s)</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Blog</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Galerie Photos</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> E-Commerce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-box-cms" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>CMS ?</h3>
+                    <img src="{{ asset('build/logo-cms.jpeg') }}" alt="">
+                    <p>
+                        "Content Management System" ou système de gestion de contenu en français.<br>
+                        C'est un ensemble de modules accessibles via une zone d'administration protégée et permettant de modifier le contenu du site web
+                        de manière intuitive sans connaissance en développement. (Textes, Images, Médias)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-box-analytic" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Outil analytique ?</h3>
+                    <img src="{{ asset('build/logo_matomo.png') }}" alt="">
+                    <p>
+                        Les outils analytiques permettent de recueillir des informations en temps réel sur les visiteurs de votre site web.<br />
+                        Nombre de visiteurs par jour, par mois, par page, leurs localisations, leurs provenances (moteurs de recherche, liens publicitaires, saisie directe de l'adresse), etc...<br />
+                        Le plus connu de ces outils et sans doute le plus utilisé est Google Analytic mais c'est aussi le plus critiqué pour le manque de transparence en rapport
+                        avec le respect de la vie privée des visiteurs et la protection de leurs données. A l'heure des lois composant le GDPR, c'est pourtant essentiel.<br />
+                        L'alternative que je propose est Matomo et le respect de la vie privée des utilisateurs est justement leur préoccupation première. "Matomo" en japonais signifie "honnêteté".
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of projects -->
+{% endblock %}
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Conception de sites web professionnels à votre image ou celle de votre activité. Projet web spécifique, E-Commerce, Site Vitrine, My Web Creation vous accompagne dans une relation de confiance en vous offrant un service sur mesure.">
+    <meta name="robots" content="index,follow,all">
+    <meta name="author" content="Xavier Ribant">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="My Web Creation" /> <!-- website name -->
+    <meta property="og:site" content="https://www.mywebcreation.be" /> <!-- website link -->
+    <meta property="og:title" content="Création de sites et de projets web sur mesure | My Web Ceation"/> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="Conception de sites web professionnels à votre image ou celle de votre activité. Projet web spécifique, E-Commerce, Site Vitrine, My Web Creation vous accompagne dans une relation de confiance en vous offrant un service sur mesure." /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="{{ asset('build/my-web-creation-logo.png') }}" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="https://www.mywebcreation.be" /> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <title>{% block title %}{% endblock %} | My Web Creation</title>
+    <!-- Favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('build/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('build/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <!-- Matomo
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//matomo.xr-concept.be/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+     End Matomo Code -->
+
+    </head>
+    <body>
+        {% block body %}
+            <div id="alert-box">
+                {{ flasher_render() }}
+            </div>
+            <!-- Navigation -->
+            <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+                <div class="container">
+
+                    <!-- Image Logo -->
+                    <a class="navbar-brand" href="{{ path('home') }}"><img src="{{ asset('build/my-web-creation-logo.png') }}" alt="alternative"></a>
+
+                    <!-- Text Logo - Use this if you don't have a graphic logo -->
+                    <!-- <a class="navbar-brand logo-text" href="index.html">Desi</a> -->
+
+                    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ path('home') }}#header">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('home') }}#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('home') }}#testimonials">Témoignages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('offers') }}">Projet sur mesure</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('contact') }}">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn-solid-sm" href="{{ path('quote_request') }}">Devis Gratuit</a>
+                            </li>
+                        </ul>
+                        <span class="nav-item social-icons">
+                            <span class="fa-stack">
+                                <a href="#" title="Bientôt">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#" title="Bientôt">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                                </a>
+                            </span>
+                        </span>
+                    </div> <!-- end of navbar-collapse -->
+                </div> <!-- end of container -->
+            </nav> <!-- end of navbar -->
+                   <!-- end of navigation -->
+
+            {% block content %}
+            {% endblock %}
+
+                   <!-- Footer -->
+            <footer id="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-3 col-md-6 footer-info">
+                                <h4>Coordonnées</h4>
+                                <p>
+                                    <i class="fas fa-phone"></i> <span>+32 (0)471 95 23 08</span><br>
+                                    <i class="fas fa-envelope"></i> <span><a href="mailto:info@mywebcreation">info@mywebcreation.be</a></span>
+                                </p>
+                                <p><br>
+                                    TVA : BE 0774.894.891<br>
+                                    IBAN : BE94 7320 6133 9114
+                                </p>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 footer-links">
+                                <h4>Categories</h4>
+                                <ul>
+                                    <li><i class="ion-ios-arrow-right"></i> <a href="{{ path('home') }}">Accueil</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a href="#">A Propos</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a href="{{ path('offers') }}">Projet sur mesure</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a href="{{ path('contact') }}">Contact</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a href="{{ path('quote_request') }}">Demande de devis</a></li>
+                                    <li><i class="ion-ios-arrow-right"></i> <a href="{{ path('general_conditions') }}">Conditions générales et vie privée</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 footer-contact">
+                                <h4>En résumé</h4>
+                                <p>
+                                    My Web Création est une jeune société reposant sur des principes fondamentaux: l'écoute, le relationnel, l'humain.<br>
+                                    Je souhaite mettre ma passion et mes connaissances du développement au service des indépendants et des PME.
+                                </p>
+                                <div class="social-links">
+                                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer><!-- #footer -->
+
+
+                   <!-- Copyright -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="p-small">Copyright © 2021 Tous droits réservés | <a href="{{ path('home') }}" class="footer-link">www.mywebcreation.be</a> | <a href="{{ path('general_conditions') }}" class="footer-link">Conditions générales</a></p>
+                        </div> <!-- end of col -->
+                    </div> <!-- enf of row -->
+
+                </div> <!-- end of container -->
+            </div> <!-- end of copyright -->
+
+                                                                <!-- Back To Top Button -->
+            <button type="button" onclick="topFunction()" id="backToTopBtn">
+                <img src="{{ asset('build/up-arrow.png') }}" alt="alternative">
+            </button>
+            <!-- end of back to top button -->
+
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            <script>
+                // Hide and show Offers
+
+                var divs = ["cgv", "privacy", "cookies"];
+                var visibleDivId = null;
+
+                function divVisibility(divId) {
+                    visibleDivId = document.getElementById(divId);
+                    if(visibleDivId === divId) {
+                        visibleDivId = null;
+                    } else {
+                        visibleDivId = divId;
+                    }
+                    hideNonVisibleDivs();
+                }
+                function hideNonVisibleDivs() {
+                    var i, divId, div;
+                    for(i = 0; i < divs.length; i++) {
+                        divId = divs[i];
+                        div = document.getElementById(divId);
+                        if(visibleDivId === divId) {
+                            div.style.display = "block";
+                        } else {
+                            div.style.display = "none";
+                        }
+                    }
+                }
+            </script>
+            <script src="{{ asset('assets/js/purecounter.min.js') }}"></script> <!-- Purecounter counter for statistics numbers -->
+            <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+            <script>
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#070f1f",
+                            "text": "#ffffff"
+                        },
+                        "button": {
+                            "background": "#7dc22b",
+                            "text": "#070f1f"
+                        }
+                    },
+                    "content": {
+                        "message": "Ce site internet utilise des cookies afin d'améliorer l'expérience utilisateur et pour connaître la provenance des visiteurs.",
+                        "dismiss": "J'ai compris",
+                        "link": "En savoir plus",
+                        "href": "http://www.mywebcreation.be/conditions-generales-et-vie-privee"
+                    }
+                });
+            </script>
+        {% endblock %}
+
+    </body>
+</html>

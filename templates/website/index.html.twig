@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Création de Site Web sur mesure | Analyse du trafic | Gestion de contenu{% endblock %}
+
+{% block content %}
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container" style="overflow-x: hidden">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h2 class="h2-medium" data-aos="fade-left" data-aos-duration="500">Site Web</h2>
+                        <div class="header-text" data-aos="fade-left" data-aos-duration="1000">
+                            <p>
+                                Votre site internet est le reflet de votre activité. Il est donc primordial qu’il soit totalement personnalisé, à votre image. Je réalise un site web unique, vous permettant d’afficher et de transmettre vos informations professionnelles, de vendre vos produits ou services.
+                            </p>
+                        </div>
+                        <a class="btn-solid-lg" style="float: left;" href="{{ path('website') }}#website" data-aos="fade-left" data-aos-duration="1500">En savoir plus</a>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+
+        <!-- Video Background -->
+        <video autoplay loop muted id="video-background" poster="{{ asset('build/small_business_background.jpeg') }}" playsinline>
+            <source src="{{  asset('build/small_business_background_video.mp4') }}" type="video/mp4"/>
+        </video>
+        <!-- end of video background -->
+
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <!-- Introduction -->
+    <div id="website" class="cards-1">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-lg-12" data-aos="fade-up">
+                    <h2 class="h2-heading">Formules</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <i class="fas fa-feather"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Web Light</h4>
+                            <div class="card-text">
+                                Conception d'un site vitrine composé d'un nombre de pages défini avec ou sans formulaire de contact
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Web Analytics</h4>
+                            <div class="card-text">
+                                La version Web Light muni d'outils d'analyse de trafic <span class="analytics-bold">respectant la vie privée des visiteurs et GDPR Compliant</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Web Full</h4>
+                            <div class="card-text">
+                                La package complet incluant un système de gestion de contenu pour modifier vous-même le contenu de votre site internet
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of introduction -->
+
+{% endblock %}
