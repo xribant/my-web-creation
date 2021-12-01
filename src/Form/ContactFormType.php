@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Contact;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -50,11 +51,13 @@ class ContactFormType extends AbstractType
                     'rows' => 8
                 ]
             ])
-            ->add('robotCheckBox', CheckboxType::class, [
-                'label' => 'Je ne suis pas une machine.',
+            ->add('captcha', CaptchaType::class, [
+                'label' => false,
                 'required' => true,
+                'invalid_message' => 'Le code tapé ne correspond pas au Captcha',
                 'attr' => [
-                    'class' => 'form-control-checkbox'
+                    'class' => 'form-control-input mt-4',
+                    'placeholder' => 'Code'
                 ]
             ])
         ;

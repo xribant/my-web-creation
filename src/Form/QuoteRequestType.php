@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\QuoteRequest;
 use App\Validator\Telephone;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -96,6 +97,15 @@ class QuoteRequestType extends AbstractType
                     'cols' => 45,
                     'rows' => 8
                     ]
+            ])
+            ->add('captcha', CaptchaType::class, [
+                'label' => false,
+                'required' => true,
+                'invalid_message' => 'Le code tapé ne correspond pas au Captcha',
+                'attr' => [
+                    'class' => 'form-control-input mt-4',
+                    'placeholder' => 'Code'
+                ]
             ])
         ;
     }

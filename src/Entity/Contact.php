@@ -43,12 +43,6 @@ class Contact
     private $message;
 
     /**
-     * @ORM\Column(type="boolean")
-     * @Assert\NotBlank(message="Cochez la case si vous êtes un humain")
-     */
-    private $robotCheckBox;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $ip;
@@ -111,18 +105,6 @@ class Contact
     public function setMessage(string $message): self
     {
         $this->message = $message;
-
-        return $this;
-    }
-
-    public function getRobotCheckBox(): ?bool
-    {
-        return $this->robotCheckBox;
-    }
-
-    public function setRobotCheckBox(bool $robotCheckBox): self
-    {
-        $this->robotCheckBox = $robotCheckBox;
 
         return $this;
     }
