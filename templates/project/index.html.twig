@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réalisations{% endblock %}
+
+{% block content %}
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10">
+                    <h1>Ils nous font confiance...</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+    <section class="project">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 window" data-aos="fade-down">
+                    <img class="canvas" src="{{ asset('build/biereau-home-page.png') }}" alt="Site web du collège du Biéreau">
+                </div>
+                <div class="col description" data-aos="fade-left">
+                    <h1>biereau.be</h1>
+                    <p class="justify-content-center">Le site internet du Collège du Biéreau de Louvain-La-Neuve.<br> Un site web évolutif muni d'une interface d'administration.<br>
+                    Cette interface simple, intuitive et sur mesure permet de modifier les images et les news défilant sur la page d'accueil.<br>
+                        La gestion des demandes d'inscriptions à l'école est également facilitée via cette même interface.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col description" data-aos="fade-right">
+                    <h1>lamarchescolidaire.be</h1>
+                    <p class="justify-content-center">
+                        Ils avaient besoin d'un site web pour offrir une vue globale de leur projet sur internet.<br>
+                        Voilà qui est fait.
+                    </p>
+                </div>
+                <div class="col-lg-6 window" data-aos="fade-left">
+                    <img class="canvas" src="{{ asset('build/lamarchescolidaire-webpage.png') }}" alt="Site web de la marche scolidaire">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-6 window" data-aos="fade-right">
+                    <img class="canvas" src="{{ asset('build/artemoi-webpage.png') }}" alt="Site web des formation Art Emoi">
+                </div>
+                <div class="col description justify-content-start align-items-center" data-aos="fade-left">
+                    <h1>art-emoi.be</h1>
+                    <p class="justify-content-center">
+                        Le site web des ateliers de Nathalie Hanot.<br>
+                        Psychologue et formatrice en Journal Créatif ©, Nathalie voulait un nouveau site web d'une part mais qui pourrait également lui faciliter la gestion des sessions
+                        de formations qu'elle propose.<br>
+                        Dans l'interface d'administration de son site, elle peut à présent créer des formations et planifier celles-ci dans un agenda.<br>
+                        Inscriptions, confirmations, création de factures et envoi de celles-ci, tout est à présent automatique.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+

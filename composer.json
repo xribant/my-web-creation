@@ -13,7 +13,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.1",
         "doctrine/orm": "^2.10",
         "giggsey/libphonenumber-for-php": "^8.12",
-        "gregwar/captcha-bundle": "^2.1",
+        "karser/karser-recaptcha3-bundle": "^0.1.20",
         "php-flasher/flasher-symfony": "^0.5.0",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.1",

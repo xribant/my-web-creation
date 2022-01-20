@@ -22,36 +22,36 @@ class ContactFormController extends AbstractController
         $form = $this->createForm(ContactFormType::class, $contact);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+            if ($form->isSubmitted() && $form->isValid()) {
 
-            $ip = $request->getClientIp();
+                $ip = $request->getClientIp();
 
-            $contact->setIp($ip);
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($contact);
+                $contact->setIp($ip);
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($contact);
 
-            $subject = '[mywebcreation.be]: '.$contact->getSubject();
-            $message = '<p><strong>Nom: '.$contact->getName().'</strong></p><p>'.$contact->getMessage().'</p>';
+                $subject = '[mywebcreation.be]: ' . $contact->getSubject();
+                $message = '<p><strong>Nom: ' . $contact->getName() . '</strong></p><p>' . $contact->getMessage() . '</p>';
 
-            $email = (new Email())
-                ->from($contact->getEmail())
-                ->to('info@mywebcreation.be')
-                ->subject($subject)
-                ->html($message);
+                $email = (new Email())
+                    ->from($contact->getEmail())
+                    ->to('info@mywebcreation.be')
+                    ->subject($subject)
+                    ->html($message);
 
-            $mailer->send($email);
-            $entityManager->flush();
+                $mailer->send($email);
+                $entityManager->flush();
 
-            $builder = $flasher->type('success')
-                ->message('Votre message nous est bien parevenu. Nous y répondrons dans les plus brefs délais.')
-                ->option('timer', 5000);
+                $builder = $flasher->type('success')
+                    ->message('Votre message nous est bien parevenu. Nous y répondrons dans les plus brefs délais.')
+                    ->option('timer', 5000);
 
-            $builder->flash();
-            return $this->redirectToRoute('home');
-        }
+                $builder->flash();
+                return $this->redirectToRoute('home');
+            }
 
         return $this->render('contact_form/index.html.twig', [
-            'contactForm' => $form->createView()
+            'contactForm' => $form->createView(),
         ]);
     }
 }

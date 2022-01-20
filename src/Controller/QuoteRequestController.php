@@ -23,9 +23,11 @@ class QuoteRequestController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($quoteRequest);
             $entityManager->flush();
+
 
             $email = (new TemplatedEmail())
                 ->from($quoteRequest->getEmail())

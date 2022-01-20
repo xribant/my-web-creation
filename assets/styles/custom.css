@@ -1287,6 +1287,54 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
+/*************************/
+/*     Projects          *
+ *************************/
+
+.project {
+  background-color: #000000;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.window {
+  height: 20rem;
+  overflow: scroll;
+  overflow-scrolling: auto;
+  -ms-overflow-style: none;
+}
+
+.window::-webkit-scrollbar {
+  display: none;
+}
+
+.canvas {
+  width: 100%;
+  border-radius: 5px;
+  -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: transform .8s;
+}
+
+.canvas:hover {
+  -webkit-filter: none !important;
+  filter: none !important;
+  transform: scale(1.05);
+}
+
+.description {
+  margin: 2rem;
+}
+
+.description p {
+  color: #e6e6e6;
+}
+
+.description h1 {
+  color: #7dc22b;
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+}
 
 /*************************/
 /*     Media Queries     */
